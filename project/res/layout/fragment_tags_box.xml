@@ -26,7 +26,6 @@
         		android:layout_gravity="center_vertical"
         		android:textSize="14sp"
         		android:lineSpacingExtra="8dp"
-        		android:textAlignment="center"
         		android:hint="Click on the pencil to add new tags!"/>
       	    
       	    <ImageButton 

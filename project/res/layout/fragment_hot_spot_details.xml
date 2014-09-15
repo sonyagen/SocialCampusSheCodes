@@ -1,0 +1,181 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F6F6F6"
+    android:padding="20dp"
+    tools:context=".HotSpotDetailsFragment" >
+
+<LinearLayout 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">	
+	<LinearLayout 
+	    android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	android:orientation="horizontal"
+    	android:gravity="center_vertical" >
+	    
+		<!-- hedline: pic and name -->
+	    <RelativeLayout
+	        android:layout_weight="4"
+	        android:layout_width="0dp"
+		    android:layout_height="wrap_content" 
+		    android:gravity="center_vertical" >
+			 <ImageView 
+			    android:id="@+id/image"
+		        android:layout_width="100dp"
+		    	android:layout_height="100dp" 
+		    	android:src="@drawable/wave" 
+		    	android:background="@drawable/Gray"
+		    	android:layout_centerVertical="true"	/>
+			 <TextView 
+			    android:id="@+id/name"
+			    android:layout_width="wrap_content"
+			   	android:layout_height="wrap_content" 
+			   	android:text="this is text"
+			   	android:textColor="#373737"	
+			   	android:textSize="22sp"
+			   	android:layout_marginLeft="7dp"
+			   	android:layout_centerVertical="true"
+			   	android:layout_toRightOf="@+id/image"	/>
+		</RelativeLayout><!-- hedline: pic and name -->
+		
+		<RelativeLayout
+		    android:layout_weight="1"
+	        android:layout_width="0dp"
+	        android:layout_height="wrap_content" >
+			 <ImageButton
+	            android:id="@+id/shareImgBtn"
+	            android:layout_width="40dp"
+	            android:layout_height="40dp"
+	            android:layout_alignParentRight="true"
+	            android:background="@drawable/circ"
+	            android:contentDescription="share with friends!"
+	            android:src="@drawable/ic_action_share" />
+	        <ImageButton
+	            android:id="@+id/joinImgBtn"
+	            android:layout_width="40dp"
+	            android:layout_height="40dp"
+	            android:layout_below="@+id/shareImgBtn"
+	            android:layout_alignRight="@+id/shareImgBtn"
+	            android:background="@drawable/circ"
+	            android:contentDescription="join the event" 
+	            android:src="@drawable/join"/>
+	        <ImageButton
+	            android:id="@+id/pinImgBtn"
+	            android:layout_width="40dp"
+	            android:layout_height="40dp"
+	            android:layout_below="@+id/joinImgBtn"
+	             android:layout_alignRight="@+id/shareImgBtn"
+	            android:background="@drawable/circ"
+	            android:contentDescription="pin to profile!"
+	            android:src="@drawable/ic_pin" />
+	    </RelativeLayout>
+	</LinearLayout>
+
+	<TextView
+	    android:id="@+id/description"
+	    android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp" />
+	
+	<fragment 
+	        android:id="@+id/hsTagBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            class="il.ac.technion.socialcampus.TagsBoxFragment"/>
+	
+	<!-- time: hedline and value -->
+    <RelativeLayout
+        android:layout_width="wrap_content"
+	    android:layout_height="wrap_content" >
+		 <TextView 
+		    android:id="@+id/timeStrHead"
+	        android:layout_width="wrap_content"
+	    	android:layout_height="wrap_content" 
+	    	android:text="when:"
+	    	android:textSize="18sp"
+	    	android:textColor="@drawable/SkyBlue"	
+	    	android:layout_marginBottom="5dp"	/>
+    	<TextView 
+		    android:id="@+id/timeStr"
+	        android:layout_width="wrap_content"
+	    	android:layout_height="wrap_content" 
+	    	android:text="this is time"
+	    	android:textSize="18sp"
+	    	android:textColor="#5A5A5A"	
+	    	android:layout_marginLeft="5dp"
+	    	android:layout_toRightOf="@+id/timeStrHead"	/>
+    </RelativeLayout>
+    
+    <!-- place: hedline and value -->
+    <RelativeLayout
+        android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_marginBottom="20dp" >
+		<TextView 
+		    android:id="@+id/placeHead"
+	        android:layout_width="wrap_content"
+	    	android:layout_height="wrap_content" 
+	    	android:text="where:"
+	    	android:textSize="18sp"
+	    	android:textColor="@drawable/SkyBlue"	/>
+		<TextView 
+		    android:id="@+id/place"
+	        android:layout_width="wrap_content"
+	    	android:layout_height="wrap_content" 
+	    	android:text="this is the place to go"
+	    	android:textColor="#5A5A5A"	
+	    	android:textSize="18sp"
+	    	android:layout_marginLeft="5dp"
+	    	android:layout_toRightOf="@+id/placeHead"	/>
+	</RelativeLayout>
+	
+	<fragment 
+		android:id="@+id/My_map"
+	  	android:layout_width="match_parent"
+	 	android:layout_height="120dp"
+	  	class="com.google.android.gms.maps.SupportMapFragment"
+	  	android:layout_marginBottom="20dp" />
+	
+	 <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp" >
+        
+	    <TextView 
+		    android:layout_width="match_parent"
+		 	android:layout_height="wrap_content"
+		 	android:text="Going:"
+		 	android:textSize="18sp" 		/>
+	     
+        <ImageView
+            android:id="@+id/usr1"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/profie_anonymous" />
+
+        <ImageView
+            android:id="@+id/usr2"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_toLeftOf="@+id/usr1"
+            android:layout_marginRight="3dp"
+            android:src="@drawable/profie_anonymous" />
+
+        <ImageView
+            android:id="@+id/usr3"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/usr2"
+            android:layout_marginRight="3dp"
+            android:src="@drawable/profie_anonymous" />
+    </RelativeLayout>
+    
+</LinearLayout>
+</ScrollView>

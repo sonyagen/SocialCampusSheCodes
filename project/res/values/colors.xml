@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+
+    <drawable name="HotPink">#FF0067</drawable>
+    <drawable name="DerkGreen">#4F9148</drawable>
+    <drawable name="MediumGreen">#6DC663</drawable>
+    <drawable name="LightGreen">#99EF8F</drawable>
+    <drawable name="LightGray">#F6F6F6</drawable>
+    <drawable name="Gray">#E6E6E6</drawable>
+    <drawable name="White">#FFFFFF</drawable>
+    <drawable name="Black">#000000</drawable>
+    <drawable name="SkyBlue">#3172AB</drawable>
+    <drawable name="GrayBlue">#6666FF</drawable>
+
+    <color name="holo_blue_bright">#ff00ddff</color>
+    <color name="holo_green_light">#ff99cc00</color>
+    <color name="holo_orange_light">#ffffbb33</color>
+    <color name="holo_red_light">#ffff4444</color>
+
+    <color name="abs__background_holo_light">#fff3f3f3</color>
+</resources>

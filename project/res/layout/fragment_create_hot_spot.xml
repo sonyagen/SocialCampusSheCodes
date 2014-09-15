@@ -1,0 +1,317 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:tools="http://schemas.android.com/tools"
+     tools:context=".CreateHotSpotFragment"
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+     >
+
+<LinearLayout 
+    
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F6F6F6"
+    android:orientation="vertical" 
+    android:padding="20dp">
+
+	<LinearLayout 
+	    android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	android:orientation="horizontal"
+    	android:gravity="center_vertical" 
+    	android:layout_marginBottom="20dp">
+	    
+		<!-- hedline: pic and name -->
+	    <RelativeLayout
+	        android:layout_weight="4"
+	        android:layout_width="0dp"
+		    android:layout_height="wrap_content" 
+		    android:gravity="center_vertical" >
+			 <ImageView 
+			    android:id="@+id/image"
+		        android:layout_width="80dp"
+		    	android:layout_height="80dp" 
+		    	android:src="@drawable/wave" 
+		    	android:background="@drawable/LightGray"
+		    	android:layout_centerVertical="true"	/>
+			 <EditText 
+			    android:id="@+id/name"
+			    android:layout_width="wrap_content"
+			   	android:layout_height="wrap_content" 
+			   	android:hint="Choose headline..."
+			   	android:textColor="#373737"	
+			   	android:textSize="18sp"
+			   	android:layout_marginLeft="7dp"
+			   	android:layout_centerVertical="true"
+			   	android:layout_toRightOf="@+id/image"	/>
+		</RelativeLayout><!-- hedline: pic and name -->
+		
+		<RelativeLayout
+		    android:layout_weight="1"
+	        android:layout_width="0dp"
+	        android:layout_height="wrap_content" >
+			 <ImageButton
+	            android:id="@+id/okBtn"
+	            android:layout_width="40dp"
+	            android:layout_height="40dp"
+	            android:layout_alignParentRight="true"
+	            android:background="@drawable/circ"
+	            android:src="@drawable/ic_action_accept" />
+			 <ImageButton
+	            android:id="@+id/cancelBtn"
+	            android:layout_width="40dp"
+	            android:layout_height="40dp"
+	            android:layout_alignParentRight="true"
+	            android:layout_below="@+id/okBtn"
+	            android:background="@drawable/circ"
+	            android:src="@drawable/ic_action_cancel" />
+	      
+	    </RelativeLayout>
+	</LinearLayout>
+
+	<!-- time: hedline and value -->
+    <RelativeLayout
+        android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_marginBottom="20dp" >
+    	<TextView 
+		    android:id="@+id/from"
+	        android:layout_width="wrap_content"
+	    	android:layout_height="wrap_content" 
+	    	android:layout_centerVertical="true"
+	    	android:layout_alignParentLeft="true"
+	    	android:text="from:"
+	    	android:textSize="15sp"
+	    	android:textColor="@drawable/SkyBlue"	/>
+    	<EditText 
+		    android:id="@+id/timeStr"
+	        android:layout_width="wrap_content"
+	    	android:layout_height="wrap_content" 
+	    	style="?android:attr/spinnerStyle"
+	    	android:textAppearance="?android:attr/textAppearanceMedium"
+	    	android:layout_centerVertical="true"
+	    	android:layout_toRightOf="@+id/from"
+	    	android:layout_marginLeft="5dp"
+	    	android:textSize="15sp"
+	    	android:textColor="#5A5A5A"	
+	    		/>
+    	<EditText 
+		    android:id="@+id/dateeStr"
+	        android:layout_width="wrap_content"
+	    	android:layout_height="wrap_content" 
+	    	style="?android:attr/spinnerStyle"
+	    	android:textAppearance="?android:attr/textAppearanceMedium"
+			android:layout_centerVertical="true"
+			android:layout_toRightOf="@+id/timeStr"
+			android:layout_marginLeft="5dp"
+	    	android:textSize="15sp"
+	    	android:textColor="#5A5A5A"	 />
+    	<TextView 
+		    android:id="@+id/to"
+	        android:layout_width="wrap_content"
+	    	android:layout_height="wrap_content" 
+	    	android:layout_centerVertical="true"
+	    	android:layout_toRightOf="@+id/dateeStr"
+	    	android:layout_marginLeft="5dp"
+	    	android:text="to:"
+	    	android:textSize="15sp"
+	    	android:textColor="@drawable/SkyBlue"	/>
+    	<EditText 
+		    android:id="@+id/endtimeStr"
+	        android:layout_width="wrap_content"
+	    	android:layout_height="wrap_content" 
+	    	android:textAppearance="?android:attr/textAppearanceMedium"
+	    	style="?android:attr/spinnerStyle"
+	    	android:layout_centerVertical="true"
+	    	android:layout_toRightOf="@+id/to"	
+	    	android:layout_marginLeft="5dp"
+	    	android:textSize="15sp"
+	    	android:textColor="#5A5A5A"	/>
+    	<EditText 
+		    android:id="@+id/enddateeStr"
+	        android:layout_width="wrap_content"
+	    	android:layout_height="wrap_content" 
+	    	android:textAppearance="?android:attr/textAppearanceMedium"
+	    	style="?android:attr/spinnerStyle"	
+	    	android:layout_centerVertical="true"
+	    	android:layout_toRightOf="@+id/endtimeStr"
+	    	android:layout_marginLeft="5dp"
+	    	android:textSize="15sp"
+	    	android:textColor="#5A5A5A"	/>
+    </RelativeLayout>
+    
+	<!--  
+    <RelativeLayout
+        android:layout_width="wrap_content"
+	    android:layout_height="wrap_content" >
+		 <TextView 
+		    android:id="@+id/timeStrHead"
+	        android:layout_width="wrap_content"
+	    	android:layout_height="wrap_content" 
+	    	android:text="start:"
+	    	android:textSize="14sp"
+	    	android:textColor="@drawable/SkyBlue"	
+	    	android:layout_marginBottom="5dp"
+	    	android:layout_centerVertical="true"	/>
+    	<EditText 
+		    android:id="@+id/timeStr"
+	        android:layout_width="wrap_content"
+	    	android:layout_height="wrap_content" 
+	    	android:hint="set time"
+	    	android:textSize="12sp"
+	    	android:textColor="#5A5A5A"	
+	    	android:layout_marginLeft="5dp"
+	    	android:layout_toRightOf="@+id/timeStrHead"	
+	    	android:layout_centerVertical="true"
+	    	android:textAppearance="?android:attr/textAppearanceMedium"
+	    	style="?android:attr/spinnerStyle"	/>
+    	<EditText 
+		    android:id="@+id/dateeStr"
+	        android:layout_width="wrap_content"
+	    	android:layout_height="wrap_content" 
+	    	android:hint="set date"
+	    	android:textSize="12sp"
+	    	android:textColor="#5A5A5A"	
+	    	android:layout_marginLeft="5dp"
+	    	android:layout_toRightOf="@+id/timeStr"
+	    	android:layout_centerVertical="true"
+	    	android:textAppearance="?android:attr/textAppearanceMedium"
+	    	style="?android:attr/spinnerStyle"		/>
+    </RelativeLayout>
+    
+    <RelativeLayout
+        android:layout_width="wrap_content"
+	    android:layout_height="wrap_content" >
+		 <TextView 
+		    android:id="@+id/endtimeStrHead"
+	        android:layout_width="wrap_content"
+	    	android:layout_height="wrap_content" 
+	    	android:text="end:  "
+	    	android:textSize="14sp"
+	    	android:textColor="@drawable/SkyBlue"	
+	    	android:layout_marginBottom="5dp"
+	    	android:layout_centerVertical="true"	/>
+    	<EditText 
+		    android:id="@+id/endtimeStr"
+	        android:layout_width="wrap_content"
+	    	android:layout_height="wrap_content" 
+	    	android:hint="set time"
+	    	android:textSize="12sp"
+	    	android:textColor="#5A5A5A"	
+	    	android:layout_marginLeft="5dp"
+	    	android:layout_toRightOf="@+id/endtimeStrHead"	
+	    	android:layout_centerVertical="true"
+	    	android:textAppearance="?android:attr/textAppearanceMedium"
+	    	style="?android:attr/spinnerStyle"	/>
+    	<EditText 
+		    android:id="@+id/enddateeStr"
+	        android:layout_width="wrap_content"
+	    	android:layout_height="wrap_content" 
+	    	android:hint="set date"
+	    	android:textSize="12sp"
+	    	android:textColor="#5A5A5A"	
+	    	android:layout_marginLeft="5dp"
+	    	android:layout_toRightOf="@+id/endtimeStr"
+	    	android:layout_centerVertical="true"
+	    	android:textAppearance="?android:attr/textAppearanceMedium"
+	    	style="?android:attr/spinnerStyle"		/>
+    </RelativeLayout>  -->
+    
+    <!-- place: hedline and value -->
+    <RelativeLayout
+        android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_marginBottom="20dp" >
+		<TextView 
+		    android:id="@+id/placeHead"
+	        android:layout_width="wrap_content"
+	    	android:layout_height="wrap_content" 
+	    	android:text="where:"
+	    	android:textSize="14sp"
+	    	android:textColor="@drawable/SkyBlue"
+	    	android:layout_centerVertical="true"	/>
+		<EditText 
+		    android:id="@+id/place"
+	        android:layout_width="match_parent"
+	    	android:layout_height="wrap_content" 
+	    	android:hint="Choose a place..."
+	    	android:textColor="#5A5A5A"	
+	    	android:textSize="14sp"
+	    	android:layout_marginLeft="5dp"
+	    	android:layout_toRightOf="@+id/placeHead"
+	    	android:layout_centerVertical="true"	/>
+	</RelativeLayout>
+	
+	<fragment 
+		android:id="@+id/My_map"
+	  	android:layout_width="match_parent"
+	 	android:layout_height="100dp"
+	  	class="com.google.android.gms.maps.SupportMapFragment"
+	  	android:layout_marginBottom="20dp" />
+	
+	<!-- describtion: hedline and value -->
+    <RelativeLayout
+        android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_marginBottom="20dp" >
+		<TextView 
+		    android:id="@+id/descHead"
+	        android:layout_width="wrap_content"
+	    	android:layout_height="wrap_content" 
+	    	android:text="comments:"
+	    	android:textSize="14sp"
+	    	android:textColor="@drawable/SkyBlue"  />
+		<EditText 
+		    android:id="@+id/desc"
+	        android:layout_width="match_parent"
+	    	android:layout_height="wrap_content" 
+	    	android:hint="Write general notes and comments..."
+	    	android:textColor="#5A5A5A"	
+	    	android:textSize="14sp"
+	    	android:layout_marginLeft="5dp"
+	    	android:layout_below="@+id/descHead"	/>
+	</RelativeLayout>
+	
+	<RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+        
+	    <TextView 
+		    android:layout_width="match_parent"
+		 	android:layout_height="wrap_content"
+		 	android:text="Going:"
+		 	android:textSize="14sp"
+	    	android:textColor="@drawable/SkyBlue"  		/>
+	     
+        <ImageView
+            android:id="@+id/usr1"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/profie_anonymous" />
+
+        <ImageView
+            android:id="@+id/usr2"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_toLeftOf="@+id/usr1"
+            android:layout_marginRight="3dp"
+            android:src="@drawable/profie_anonymous" />
+
+        <ImageView
+            android:id="@+id/usr3"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/usr2"
+            android:layout_marginRight="3dp"
+            android:src="@drawable/profie_anonymous" />
+    </RelativeLayout>
+    
+
+</LinearLayout>
+</ScrollView>    
+    
+    
+    
+    
+

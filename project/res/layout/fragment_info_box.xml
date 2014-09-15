@@ -1,0 +1,117 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".InfoBoxFragment" 
+    android:id="@+id/infoBox" 
+    android:padding="15dp"
+    android:background="@drawable/hot_spot_info_box_backround" 
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+	    android:layout_height="wrap_content" >
+		 <ImageView 
+		    android:id="@+id/image"
+	        android:layout_width="80dp"
+	    	android:layout_height="80dp" 
+	    	android:src="@drawable/wave" 
+	    	android:background="@drawable/Gray"
+	    	android:layout_centerVertical="true"	/>
+		<RelativeLayout
+		    android:layout_width="wrap_content"
+	   	 	android:layout_height="wrap_content"
+	   	 	android:layout_toRightOf="@+id/image"
+	   	 	android:layout_centerVertical="true" 
+	   	 	android:layout_marginLeft="10dp">
+		
+		 <TextView 
+		    android:id="@+id/name"
+		    android:layout_width="wrap_content"
+		   	android:layout_height="wrap_content" 
+		   	android:text="this is text"
+		   	android:textColor="#373737"	
+		   	android:textSize="18sp"
+		   	android:layout_marginBottom="7dp"	/>
+		    
+		<TextView 
+		    android:id="@+id/timeStr"
+	        android:layout_width="wrap_content"
+	    	android:layout_height="wrap_content" 
+	    	android:layout_below="@+id/name"
+	    	android:text="this is time"
+	    	android:textColor="#5A5A5A"	
+	    	android:layout_marginBottom="5dp"	/>
+		<TextView 
+		    android:id="@+id/place"
+	        android:layout_width="wrap_content"
+	    	android:layout_height="wrap_content" 
+	    	android:text="this is the place to go"
+	  		android:layout_below="@+id/timeStr"
+	    	android:textColor="#5A5A5A"	/>
+		</RelativeLayout>
+	</RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp" >
+		 <ImageButton
+            android:id="@+id/shareImgBtn"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/circ"
+            android:contentDescription="share with friends!"
+            android:src="@drawable/ic_action_share" />
+		 
+        <ImageButton
+            android:id="@+id/joinImgBtn"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_toRightOf="@+id/shareImgBtn"
+            android:background="@drawable/circ"
+            android:contentDescription="join the event" 
+            android:src="@drawable/join"/>
+
+        <ImageButton
+            android:id="@+id/pinImgBtn"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_toRightOf="@+id/joinImgBtn"
+            android:background="@drawable/circ"
+            android:contentDescription="pin to profile!"
+            android:src="@drawable/ic_pin" />
+
+        <ImageView
+            android:id="@+id/usr1"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/profie_anonymous" 
+            android:visibility="gone"/>
+
+        <ImageView
+            android:id="@+id/usr2"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_toLeftOf="@+id/usr1"
+            android:layout_marginRight="3dp"
+            android:src="@drawable/profie_anonymous" 
+            android:visibility="gone"/>
+
+        <ImageView
+            android:id="@+id/usr3"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/usr2"
+            android:layout_marginRight="3dp"
+            android:src="@drawable/profie_anonymous" 
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+		
+</LinearLayout>
+
+

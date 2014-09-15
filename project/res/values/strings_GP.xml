@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Button text -->
+    <string name="btn_logout_from_google">Log out from Google</string>
+    <string name="btn_revoke_access">Delete account</string>
+    <string name="log_in_msg">Loggin in, please wait!</string>
+    <string name="log_out_msg">Loggin out, please wait!</string>
+    <string name="revoke_access_msg">Deleting account!</string>
+</resources>

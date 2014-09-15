@@ -1,0 +1,38 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    tools:context=".TagSearchFragment"
+    android:orientation="horizontal" >
+
+	<AutoCompleteTextView
+	    android:layout_gravity="center_vertical"
+        android:id="@+id/searchBox"    
+        android:layout_width="0dp"
+        android:layout_weight="4"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:hint="search..." 
+        android:textSize="20sp"/>
+	
+	
+	<ImageButton
+	     android:id="@+id/searchBtn"    
+	     android:layout_width="40dp"
+	     android:layout_height="40dp"
+	     android:src="@drawable/ic_action_search"
+	     android:background="@drawable/circ" 
+	     android:layout_gravity="center_vertical"
+	     android:visibility="gone"/>
+	
+	<ImageButton
+	     android:id="@+id/addBtn"    
+	     android:layout_width="40dp"
+	     android:layout_height="40dp"
+	     android:src="@drawable/ic_action_new"
+	     android:background="@drawable/circ" 
+	     android:layout_toRightOf="@+id/searchBtn"
+	     android:layout_gravity="center_vertical"  />
+
+
+</LinearLayout>

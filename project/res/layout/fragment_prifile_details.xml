@@ -1,0 +1,45 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PrifileDetailsFragment" >
+
+	<LinearLayout 
+	    android:id="@+id/all"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:orientation="vertical"
+	    android:padding="16dp" >
+
+	    <RelativeLayout
+	        android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+      	<ImageView
+            android:id="@+id/imgProfilePic"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:contentDescription="User's photo"
+            android:background="@drawable/HotPink"	/>
+ 
+        <TextView
+            android:id="@+id/txtName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:textSize="20sp" 
+            android:text="My Name"
+            android:layout_toRightOf="@+id/imgProfilePic"
+			android:layout_centerVertical="true"  />
+        </RelativeLayout>
+        
+	    <fragment 
+	        android:id="@+id/tagBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            class="il.ac.technion.socialcampus.TagsBoxFragment"/>
+	    
+	</LinearLayout>
+	</ScrollView>
+
